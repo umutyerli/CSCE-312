@@ -1,0 +1,22 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/03/CaesarCipher.hdl
+
+/**
+ * Implement a 4-bit dynamic caesar cipher that computes out=in+counter, where counter=<0,1,2,3,4,5,6,....,15,0,1,2,...>
+ * Please write the truth table of the circuit in another text file.
+ * You may use the 4-bit adder you implemented in project 2
+ */
+
+CHIP CaesarCipher {
+    IN in[4];
+    OUT out[4];
+    
+	PARTS:
+
+	PC(inc=true, out[0..3]=count);
+	Add4(a=in,b=count,out=out);
+
+	
+}
